@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="UTF-8">
+    <head>
+        <title>COORS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- jQueryMobileCSS - styling-->
+		<link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
+				
+		<!-- jQueryMobile icons -->
+		<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+		
+		<!-- jQueryMobile core CSS -->
+		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+        
+		<!-- Owl stylesheet -->
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		
+		<!-- Owl Theme -->
+		<link rel="stylesheet" href="css/owl.theme.css">
+				
+		<!-- NIGHTLY style -->
+		<link rel="stylesheet" href="css/nightly.css" />
+				
+		<!-- Load Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic|Oswald:400,700' rel='stylesheet' type='text/css'>
+		
+		<!-- Load Font Awesome Icons -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		
+		<!-- jQueryMobile -->
+		<script src="js/jquery.mobile.min.js"></script>
+		
+		<!-- Owl Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+        
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		
+    </head>
+    <body>
+    
+        <div data-role="page" data-theme='a'>
+        
+            <div data-role="panel" data-display="push" id="sidebar" data-theme="a" style="background-color:#0F0F0F; border:none;">
+                <ul data-role="listview">
+                    <li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
+                    <li data-icon='false'><a data-ajax="false" href="About.html">About Us
+                    </a></li>
+                    <li data-icon='false'><a data-ajax="false" href="Solutions.html">Products</a></li>
+                    <li data-icon='false'><a data-ajax="false" href="contact.html">Contact</a></li>
+                </ul>
+            </div> 
+    
+            <div data-role="header" data-tap-toggle="false" data-theme='a' style="background-color:#0F0F0F; position:fixed; top:0; z-index:9000; height:50px; border:none">
+                <a href='#sidebar'data-role="none">
+                	<img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" style="top:20px" />
+				</a>
+            </div>
+            <div>
+                	<img src="images/logo.png" width="100" style="position:fixed; top:20px; right:20px; z-index:1000; width:20%; max-width:100px" />
+			</div>
+            
+
+            <div data-role="content">
+                <div data-role="none" id="main-slider" class="owl-carousel"  style="position:relative;top:50px">
+                    <div class="item">
+                      <img src="images/2014/10/num1.png" alt="Grab" class="img-responsive">
+                    </div>
+                </div>
+        
+        
+        <h2> 
+        </h2>
+                       
+				<h2 style="text-align: center; padding: 15px 0; font-size:32px">
+                	CTL PACKAGING USA                </h2>
+                
+        <h3 style="text-align: center; padding: 8px 0; font-size:20px">
+                  The Ultimate Solution for the Plastic Tube Industry!
+                                </h3>
+                <div class="container">
+      		<!-- Example row of columns -->
+				<div class="row">
+                	<div class="col-md-5 col-md-offset-1">
+            			<div class="widget">
+							<div class="textwidget">
+                            	<img src="images/2014/10/cfp.png" onclick class="img-responsive" />
+								<h3 style=" text-align:center; padding:5px 0">
+                      
+                       <button type="button" onClick="window.plugins.socialsharing.share('@coorsrecruiters #CoorsHealthcareSolutions')" style="background-color:#181818; color:#FFF">
+                                  SHARE
+                                </button>
+
+                      <p>
+                    CTL Packaging is well known in Europe for its high end plastic extruded tube packaging. Our new venture into the USA is focused on a cutting edge innovation in tubes called the easysupplytube, the ultimate solution for the plastic industry. Easysupplytube is an injection molded plastic tube, with an in-mold label. This technology combines superior decoration, improved supply chain performance with optimal run sizes and reduced lead-times.
+                    </p>
+                    </h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-md-5">
+            			 <button type="button" onClick="location.href='contact.html'" style="background-color:#181818; color:#FFF">
+                                  CTL<br>PACKAGING USA  
+                                </button>
+                  <div class="widget">
+                        	<div class="textwidget">
+                
+                
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+			</div>
+
+			
+        
+        <script type="text/javascript">
+        
+            $(document).ready(function($) {
+            
+                "use strict";
+                
+                var aSearchClicked = false;
+                
+                    jQuery(".sub-menu").hide();
+                    
+                    if("ontouchstart" in document.documentElement)
+                    {	
+                    		jQuery(".menu-item-has-children").bind('touchstart touchon', function(event){
+                    		event.preventDefault();
+                    			jQuery(this).children(".sub-menu").toggleClass("active").toggle(350);
+                    				return false;
+                    		}).children(".sub-menu").children("li").bind('touchstart touchon', function(event) {
+                    		  	window.location.href = jQuery(this).children("a").attr("href");
+                    		});
+                    		$('#a-search').bind('touchstart touchon', function(event){
+                    				if(aSearchClicked)
+                    				{
+                    					$('#searchform').removeClass('moved');
+                    					aSearchClicked = false;
+                    				}
+                    				else
+                    				{
+                    					$('#searchform').addClass('moved');
+                    					aSearchClicked = true;
+                    				}
+                    		});
+                    	}
+                    	else
+                    	{
+                    		
+                    		jQuery(".menu-item-has-children").bind('click', function(event){
+                    		event.preventDefault();
+                    			jQuery(this).children(".sub-menu").toggleClass("active").toggle(350);
+                    				return false;
+                    		}).children(".sub-menu").children("li").bind('click', function(event) {
+                    		  	window.location.href = jQuery(this).children("a").attr("href");
+                    		});
+                    		$('#a-search').bind('click', function(event){
+                    				if(aSearchClicked)
+                    				{
+                    					$('#searchform').removeClass('moved');
+                    					aSearchClicked = false;
+                    				}
+                    				else
+                    				{
+                    					$('#searchform').addClass('moved');
+                    					aSearchClicked = true;
+                    				}
+                    		});
+                    		
+                    }
+            
+                var time = 8; // time in seconds
+                 
+                  var $progressBar,
+                      $bar, 
+                      $elem, 
+                      isPause, 
+                      tick,
+                      percentTime;
+                 
+              
+                    $("#main-slider").owlCarousel({   
+                          
+                          slideSpeed : 700,
+                          paginationSpeed : 700,
+                          rewindSpeed : 1500,
+                          singleItem : true,
+                          pagination : false,
+                          lazyLoad : true,
+                          autoPlay : 10000,
+                          stopOnHover : true,
+                          navigation: false,
+                          navigationText: [
+                            "<i class='owl-nav-left fa fa-angle-left'></i>",
+                            "<i class='owl-nav-right fa fa-angle-right'></i>"
+                            ],
+                          afterInit : progressBar,
+                          afterMove : moved,
+                          startDragging : pauseOnDragging
+                       });
+                 
+                 
+                    function progressBar(elem){
+                      $elem = elem;
+                      buildProgressBar();
+                      start();
+                    }
+                 
+                 
+                    function buildProgressBar(){
+                      $progressBar = $("<div>",{
+                        id:"progressBar"
+                      });
+                      $bar = $("<div>",{
+                        id:"bar"
+                      });
+                      $progressBar.append($bar).prependTo($elem);
+                    }
+                 
+                    function start() {
+                      
+                      percentTime = 0;
+                      isPause = false;
+                      
+                      tick = setInterval(interval, 10);
+                    };
+                 
+                    function interval() {
+                      if(isPause === false){
+                        percentTime += 1 / time;
+                        $bar.css({
+                           width: percentTime+"%"
+                         });
+                         
+                        if(percentTime >= 100){
+                        
+                          $elem.trigger('owl.next')
+                        }
+                      }
+                    }
+                 
+                    function pauseOnDragging(){
+                      isPause = true;
+                    }
+                 
+                    function moved(){
+                    
+                      clearTimeout(tick);
+                      start();
+                    }
+                 
+                    
+                     $elem.on('mouseover',function(){
+                       isPause = true;
+                     })
+                     $elem.on('mouseout',function(){
+                       isPause = false;
+                     })
+            })(jQuery);
+        
+        </script>
+
+    </body>
+</html>
